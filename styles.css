@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Lavishly+Yours&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.navbar {
+    background-color: rgb(34, 25, 25);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+
+padding-left: 15px;
+   
+}
+
+.logo-main {
+    
+    font-family: "Fascinate Inline", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;    
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff637e, #e05888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 5px rgba(234, 173, 173, 0.3);
+
+
+}
+
+
+.logo-sub {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Fascinate Inline", system-ui;
+    background: linear-gradient(90deg, #f3eff1, #d4c5c8, #a89195, #f9f4f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 5px rgba(220, 201, 201, 0.3);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.xtraLinks {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    color: #333;
+    margin-top: 10px;
+    
+}
+
+.xtra {
+    background-color: #ddd;
+    border: 4px solid plum;
+    border-radius: 20px;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: 0.3s;
+    
+}
+
+.xtra:hover {
+    background-color: plum;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+main {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    main {
+        margin-top: 60px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        padding-left: 15px;
+        z-index: 101;
+        text-align: center;
+    }
+}
+
+/* Add these new styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.grid-item p {
+    padding: 0 10px 10px;
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .grid-item h3 {
+        font-size: 14px;
+    }
+
+    .grid-item p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add these new styles for the search section */
+.search-container {
+    margin-top: 70px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: red;
+}
+
+.search-box button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: darkred;
+}
+
+/* Update main margin to account for search bar */
+main {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Update mobile styles */
+@media screen and (max-width: 768px) {
+    .search-container {
+        margin-top:0;
+        padding: 15px;
+    }
+
+    .search-box input {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .search-box button {
+        padding: 10px 20px;
+    }
+
+    .xtra {
+        display: none;
+    }
+}
+
+/* Add these new styles for active nav link */
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: white;
+}
+
+/* Add these new styles for footer */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-section h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 30px;
+    height: 2px;
+    background-color: red;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    color: #666;
+}
+
+/* Add responsive styles for footer */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Add these new styles for advertisements */
+.ad-container {
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.ad-left, .ad-right {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px; /* Standard banner ad width */
+    z-index: 90;
+}
+
+.ad-left {
+    left: calc((100% - 1800px) / 2 - 180px); /* 20px margin from content */
+}
+
+.ad-right {
+    right: calc((100% - 1800px) / 2 - 180px);
+}
+
+.ad-content {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.ad-content h3 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.ad-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hide ads on smaller screens */
+@media screen and (max-width: 1800px) {
+    .ad-left {
+        left: 10px;
+    }
+    
+    .ad-right {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .ad-left, .ad-right {
+        display: none;
+    }
+    
+    .grid-container {
+        margin: 0 auto;
+    }
+}
+
+/* Update main content to accommodate ads */
+.grid-container {
+    max-width: 1400px; /* Reduced to make space for ads */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Add these styles for row headers */
+.row-header {
+    grid-column: 1 / -1;  /* Spans full width */
+    margin: 20px 0 10px 0;
+}
+
+.more {
+
+    width: 50%;
+    background-color: #ddd;
+    border: 4px solid plum;
+    border-radius: 20px;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.more a {
+    text-align: right;
+    color: #333;
+    text-decoration: none;
+}
+
+.more:hover{
+    background-color: plum;
+    color: white;
+    transform: translateX(5px);
+    width: 70%;
+}
+
+.row-header h2 {
+    color: white;
+    font-size: 24px;
+    padding: 10px 0;
+    border-bottom: 2px solid red;
+    margin-bottom: 20px;
+}
+
+/* Update mobile styles */
+@media screen and (max-width: 768px) {
+    .row-header h2 {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+}
+
+/* Add these styles for 4-column grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Update responsive grid for 4 columns */
+@media screen and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Update grid container styles for home page */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Mobile responsive styles for home-grid */
+@media screen and (max-width: 1200px) {
+    .home-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .home-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .row-header {
+        margin: 15px 0 10px 0;
+    }
+
+    .row-header h2 {
+        font-size: 18px;
+    }
+
+    .more {
+        width: 100%;
+        margin: 10px 0 20px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .grid-item h3 {
+        font-size: 14px;
+    }
+
+    .grid-item p {
+        font-size: 12px;
+    }
+}
+
+/* Add these new styles at the end of your file */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px 0;
+    z-index: 99;
+}
+
+.mobile-nav-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        position: relative;
+        padding: 15px 0;
+    }
+
+    .logo {
+        position: relative;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+}
+
+/* Styles for Blog page*/
+
+.blog-post {
+    width: 60%;
+    height: 200px;
+    background-color: #fff;
+    margin: auto;
+}
+
+.blogImg {
+
+    width: 25%;
+    height: auto;
+}
